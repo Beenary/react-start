@@ -1,0 +1,51 @@
+.ant-input{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+
+.ant-form-item{
+  &.ant-form-item-with-help{
+    margin-bottom: 4px
+  }
+}
+
+.ant-form-item-control{
+  .ant-form-explain{
+    font-size: 12px;  
+  }
+}
+
+.input-border-bottom{
+  .ant-input,
+  .ant-select-selection,
+  &.ant-input{
+    border: 0;
+    border-bottom: 1px solid @normal-color;
+    border-radius: 0;
+  }
+  &.ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active {
+    border-bottom: 1px solid @primary-color;
+    box-shadow: none !important;
+  }
+  input&{
+    &:focus,
+    &:hover{
+      border-bottom: 1px solid @primary-color;
+    }
+  }
+}
+
+.input-phone{
+  .input-phone-prefix&{
+    input{
+      padding-left: 50px !important;
+    }
+  }
+}
+
+.input-label{
+  font-size: 14px;
+  color: @gray-6;
+  margin-bottom: 6px;
+}

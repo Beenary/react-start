@@ -1,0 +1,43 @@
+@auth-prefix: ~"auth";
+
+
+.@{auth-prefix}-login{
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  .@{auth-prefix}-login-header{
+    .@{auth-prefix}-login-header-logo{
+      display: -webkit-box;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 120px;
+      line-height: 1;
+    }
+    .@{auth-prefix}-login-header-text{
+      font-size: 16px;
+      color: @gray-9;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 100;
+    }
+  }
+  .@{auth-prefix}-login-form{
+    width: 320px;
+    .@{auth-prefix}-login-form-button{
+      width: 100%;
+    }
+    .@{auth-prefix}-login-form-forgot{
+      text-align: center
+    }
+    .@{auth-prefix}-login-form-error{
+      color: @error-color;
+      text-align: center;
+    }
+  }
+}
+

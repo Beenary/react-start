@@ -1,0 +1,46 @@
+.ant-btn{
+  text-shadow: none;
+  letter-spacing: 0.2px;
+}
+
+[ant-click-animating-without-extra-node]:after {
+	animation: 0s !important;
+}
+
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.btn-rounded{
+  border-radius: 5px;
+  padding: 0 28px;
+  &.ant-btn-lg{
+    padding: 0 35px;
+  }
+}
+
+.btn-shadow{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+} 
+
+.btn-toolbar{
+  color: @gray-8;
+  background: @gray-2;
+  border: none;
+  outline: 0;
+  font-size: 20px;
+  box-shadow: none;
+  &--light&{
+    background: @gray-0;
+  }
+  &:hover{
+    background: @gray-3;
+    color: @gray-8;
+  }
+  &:active,
+  &:focus{
+    background: fade(@primary-color, 10%);
+    color: @primary-color;
+  }
+}

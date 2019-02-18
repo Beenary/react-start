@@ -1,0 +1,136 @@
+.table{
+  height: 100%;
+  .ant-spin-nested-loading{
+    height: 100%;
+    .ant-spin-container{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .ant-table{
+        height: 100%;
+        .ant-table-content{
+          height: 100%;
+          .ant-table-scroll{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .ant-table-header{
+              background-color: @gray-1;
+            }
+            .ant-table-body{
+              flex: 1 1 0;
+              overflow: auto;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .ant-pagination{
+        display: flex;
+        padding: 19px 30px;
+        justify-content: flex-end;
+        border-top: 1px solid @gray-3;
+        flex: 0 0 auto;
+        &.ant-table-pagination{
+          margin: 0;
+        }
+      }
+    }
+  }
+  .ant-table-thead > tr > th{
+    font-size: 14px;
+    background: @gray-0;
+    color: @gray-8;
+    border-bottom: 1px solid @gray-3;
+    &:hover{
+      background: @gray-0 !important;
+      > div {
+        &:before{
+          background:rgba(0,0,0,0) !important;
+        }
+      }
+    }
+  }
+  .ant-table-thead > tr > th, 
+  .ant-table-tbody > tr > td {
+    font-weight: 100;
+    padding: 15px 20px;
+  }
+  .ant-table-thead > tr > th.ant-table-column-sort{
+    color: @gray-9;
+    font-weight: 600;
+  }
+  .ant-table-column-sorter{
+    color: @gray-4;
+  }
+  .ant-table-tbody > tr:hover > td{
+    background-color: fade(@gray-3, 25);
+  }
+  &-action-btns{
+    padding: 6px 20px !important;
+  }
+  .number-value{
+    text-align: right
+  }
+
+  &-no-border{
+    .ant-table-tbody > tr > td{
+      border: 0;
+    }
+  }
+  .table-row-active > td,
+  .table-row-active > td:hover{
+    background-color: fade(@primary-color, 10) !important;
+    color: #3D901F;
+    /* font-weight: 600; */
+  }
+
+  &-empty{
+    .ant-table-body{
+      height: auto !important;
+      flex: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  .ant-table-placeholder{
+    border: 0;
+    margin: 50px auto;
+    color: @gray-8;
+    font-weight: bold;
+  }
+}
+
+.table-sm{
+  .ant-table-thead > tr > th {
+    padding: 10px 20px;
+    font-size: 14px;
+  } 
+  .ant-table-tbody > tr > td {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+}
+
+.table-add-padd{
+  /* .ant-table-thead > tr > th:first-child, {
+    padding-left: 50px !important;
+  }
+  .ant-table-thead > tr > th:last-child {
+    padding-right: 50px !important;
+  } */
+  .ant-table-header{
+    padding: 0px 25px;
+  }
+  .ant-table-body{
+    padding: 15px 25px;
+  }
+}
+
+.table-empty{
+  .ant-table-body {
+    height: auto !important;
+    flex: 0 !important;
+    padding: 0 !important;
+  }
+}

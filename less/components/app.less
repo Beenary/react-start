@@ -1,0 +1,335 @@
+html{
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: @gray-1;  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @gray-5; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: @gray-6; 
+}
+
+.app{
+  height: 100%;
+}
+
+.app-main{
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.app-top-bar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 36px;
+  border-bottom: 1px solid @gray-3;
+  padding-right: 20px;
+  a {
+    color: @gray-4
+  }
+  &-name{
+    font-size: 14px;
+    color: @gray-7
+  }
+  &-avatar{
+    height: 26px;
+    width: 26px;
+    background-color: @gray-5;
+    border-radius: 13px;
+    border: 3px solid @gray-2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 12px 0 10px;
+  }
+}
+
+.app-content{
+  overflow: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-sidebar{
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  background-color: @gray-1;
+  border-right: 1px solid @gray-3;
+  width: 55px;
+  flex: 0 0 auto;
+  &-head{
+    &-logo{
+      margin: 10px 0;
+      font-size: 30px;
+      display: -webkit-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-menu{
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    &-item{
+      display: -webkit-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      width: 36px;
+      color: @gray-4;
+      &:hover{
+        color: @gray-4;
+      }
+      &.active{
+        color: @gray-8;
+        background-color: @gray-4
+      }
+
+    }
+    &-item + &-item{
+      margin-top: 10px;
+    }
+  }
+}
+
+.web-app-sidebar{
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  background-color: @gray-0;
+  border-right: 1px solid @gray-3;
+  width: 151px;
+  flex: 0 0 auto;
+  &-head{
+    &-logo{
+      margin: 25px 0 0 20px;
+      font-size: 46px;
+      display: -webkit-box;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+  }
+  &-section-title{
+    font-size: 12px;
+    color: @gray-5;
+    margin: 40px 0 15px 20px; 
+  }
+  &-menu{
+    display: -webkit-box;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+    &-item{
+      display: -webkit-box;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 20px;
+      align-items: center;
+      height: 36px;
+      width: auto;
+      color: @gray-7;
+      margin-top: 15px;
+      position: relative;
+      &:hover{
+        color: @gray-4;
+      }
+      &.active{
+        text-decoration: none;
+        font-weight: bold;
+        &:after{
+          content: '';
+          position: absolute;
+          width: 5px;
+          right: 0;
+          background: #6ABF4B;
+          bottom: 0;
+          top: 0;
+          z-index: 1;
+        }
+      }
+
+    }
+    &-item + &-item{
+      margin-top: 10px;
+    }
+  }
+}
+
+.app-confirm{
+  .ant-modal-content{
+    box-shadow: @shadow-5;
+  }
+  .ant-modal-body{
+    padding: 30px 40px;
+    .ant-modal-confirm-title{
+      font-size: 24px;
+      margin-bottom: 24px;
+      font-weight: 100;
+    }
+    .ant-modal-confirm-content{
+      margin-left: 0;
+      font-size: 15px;
+    }
+    .ant-modal-confirm-btns{
+      margin-top: 30px;
+    }
+  }
+  &.rounded-button{
+    .ant-modal-confirm-btns{
+      .ant-btn{
+        border-radius: 50px;
+        height: 44px;
+        padding: 0 28px;
+      }
+    }
+  }
+}
+
+.app-modal{
+  padding: 40px 0;
+  .ant-modal-content{
+    .ant-modal-close{
+      right: 24px;
+      top: 24px;
+      .ant-modal-close-x{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+    .ant-modal-header{
+      padding-top: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 30px;
+      border-bottom: 0;
+      /* margin-bottom: 30px; */
+      .ant-modal-title{
+        font-size: 24px;
+        font-weight: 100;
+      }
+    }
+    .ant-modal-body{
+      padding: 0px 40px;
+    }
+    .ant-modal-footer{
+      border-top: 0;
+      padding-top: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 30px;
+     /*  margin-top: 30px; */
+    }
+  }
+  &.app-modal-bordered{
+    .ant-modal-header{
+      border-bottom: 1px solid @gray-2;
+    }
+    .ant-modal-footer{
+      border-top: 1px solid @gray-2;
+    }
+  }
+}
+
+.app-form{
+  .ant-form-item-label{
+    line-height: initial;
+    label{
+      font-size: 14px;
+      color: @gray-6;
+    }
+  }
+}
+
+.app-mu-ls{
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  .app-mu-lk{
+    font-weight: 100;
+    color: @gray-8;
+    padding: 15px;
+    margin: 0 12px;
+    cursor: pointer;
+    position: relative;
+    /* text-transform: uppercase; */
+    /* margin-bottom: 5px; */
+    &-active,
+    &.active{
+      color: @gray-7;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 50px;
+        background: @primary-color;
+        height: 4px;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+    }
+    &.app-mu-lk--upcs{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 600;
+      color: @gray-6;
+    }
+  }
+  .app-mu-lk-status{
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px;
+      border-radius: 7.5px;
+      margin-right: 10px;
+    }
+    &.complete{
+      &:before{
+        background-color: @primary-color
+      }
+    }
+    
+    &.incomplete{
+      &:before{
+        background-color: @warning-color
+      }
+    }
+  }
+  &--lfta&&{
+    justify-content: start;
+    align-items: center;
+  }
+}
